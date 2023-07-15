@@ -1,6 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 /* Function to get the last digit of a number */
 int getLastDigit(int number) {
