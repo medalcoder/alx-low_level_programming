@@ -1,20 +1,16 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
+ * Return: always 0
  */
-int main(void) {
-    char ch;
+int main(void)
+{
+	char i;
 
-    // Print the alphabet from 'a' to 'z' using putchar
-    for (ch = 'a'; ch <= 'z'; ch++) {
-        putchar(ch);
-    }
+	for (i = 'a'; i <= 'z'; i++)
+		putchar(i);
+	putchar('\n');
 
-    // Print a new line using putchar
-    putchar('\n');
-
-    return (0);
+	return (0);
 }
