@@ -1,28 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
+ * Return: always 0
  */
-int main(void) {
-    char lowercase, uppercase;
 
-    // Print the lowercase alphabet using putchar
-    for (lowercase = 'a'; lowercase <= 'z'; lowercase++) {
-        putchar(lowercase);
-    }
+int main(void)
+{
+    char i;
 
-    // Print a new line using putchar
+    for (i = 'a'; i <= 'z'; i++)
+	    putchar(i);
+    for (i = 'A'; i <= 'Z'; i++)
+	    putchar(i);
     putchar('\n');
-
-    // Print the uppercase alphabet using putchar
-    for (uppercase = 'A'; uppercase <= 'Z'; uppercase++) {
-        putchar(uppercase);
-    }
-
-    // Print a new line using putchar
-    putchar('\n');
-
     return (0);
 }
