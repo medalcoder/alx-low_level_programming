@@ -1,26 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
+ * Return: always 0
  */
 
-int main(void) {
-    int i;
+int main(void)
+{
+int i;
+char j;
 
-    // Print numbers 0 to 9 using putchar
-    for (i = 0; i < 10; i++) {
-        putchar('0' + i);
-    }
+for (i = 0; i < 10; i++)
+putchar(i + '0');
+for (j = 'a'; j <= 'f'; j++)
+putchar(j);
 
-    // Print lowercase letters a to f using putchar
-    for (i = 0; i < 6; i++) {
-        putchar('a' + i);
-    }
+putchar('\n');
 
-    // Print a new line using putchar
-    putchar('\n');
-
-    return 0;
+return (0);
 }
