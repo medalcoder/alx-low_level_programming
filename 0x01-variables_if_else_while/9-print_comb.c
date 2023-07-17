@@ -1,23 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
+ * Return - always 0
+ *
  */
+
 int main(void)
 {
-	char t = 48;
+int i;
+char j;
 
-	while (t != 57)
-	{
-		putchar(t);
-		if (t != 57)
-		{
-			putchar(',')
-		}
-		t++;
-	}
-	putchar('\n');
-	putchar();
-	return (0);
-}	
+for (i = '0'; i < 10; i++)
+{
+putchar(i);
+putchar(',');
+putchar(' ');
+}
+putchar('\n');
+
+return (0);
+}
