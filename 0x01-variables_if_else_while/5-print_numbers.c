@@ -1,21 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - main function
  *
  * Return: Always 0 (Success)
  */
 
-int main(void) {
-    char digit;
+int main(void)
+{
+	int i;
+	
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
 
-    // Print single-digit numbers of base 10 starting from 0 using putchar
-    for (digit = '0'; digit <= '9'; digit++) {
-        putchar(digit);
-    }
+	printf("\n");
 
-    // Print a new line using putchar
-    putchar('\n');
+	return (0);
 
-    return 0;
 }
