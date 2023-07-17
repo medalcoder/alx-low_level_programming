@@ -1,1 +1,1 @@
-This is the beginning of C program
+This is not an empty file
