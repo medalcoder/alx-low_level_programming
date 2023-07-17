@@ -1,23 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
+ * Return: always 0 
  */
 
-int main(void) {
-    char lowercase;
+int main(void)
+{
+	char i;
 
-    // Print the lowercase alphabet excluding 'q' and 'e' using putchar
-    for (lowercase = 'a'; lowercase <= 'z'; lowercase++) {
-        if (lowercase != 'q' && lowercase != 'e') {
-            putchar(lowercase);
-        }
-    }
+	for (i = 'a'; i <= 'z'; i++)
+		if (i != 'q' && i != 'e')
+			putchar(i);
 
-    // Print a new line using putchar
-    putchar('\n');
+	putchar('\n');
 
-    return 0;
+	return (0);
 }
