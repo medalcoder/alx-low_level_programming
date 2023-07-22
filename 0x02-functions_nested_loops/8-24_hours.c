@@ -1,22 +1,26 @@
 #include "main.h"
-
 /**
- * print_square - prints square using the '#' character
- * @size: size of the square
+ * jack_bauer - prints every minite of the day
+ *
+ *
+ *
  * Return: void
+ *
  */
-void print_square(int size)
+void jack_bauer(void)
 {
-	if (size <= 0)
-		_putchar('\n');
-	else
-	{
-		int i, j;
 
-		for (i = 1; i <= size; i++)
+	int i, j;
+
+	for (i = 0; i < 24; i++)
+	{
+		for (j = 0; j < 60; j++)
 		{
-			for (j = 1; j <= size; j++)
-				_putchar('#');
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
+			_putchar(':');
+			_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
 			_putchar('\n');
 		}
 	}
