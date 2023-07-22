@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * main - Test for positive or negative function
  *
  * Return - always 0
