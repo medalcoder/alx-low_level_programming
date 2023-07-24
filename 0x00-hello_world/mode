@@ -1,0 +1,4 @@
+#!/bin/bash
+for file in *; do
+  chmod -m u+x,g+x,o+x $file
+done
