@@ -2,7 +2,7 @@
 
 /**
  * leet - function that encodes a string into 1337
- * @i: string to be encoded
+ * @s: string to be encoded
  * Return: encodes string
  */
 
