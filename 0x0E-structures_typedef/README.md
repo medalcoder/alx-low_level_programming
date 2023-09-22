@@ -1,1 +1,0 @@
-The Structure Typedef tasks
