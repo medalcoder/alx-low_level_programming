@@ -8,7 +8,7 @@
 
 int print_reverse(va_list val)
 {
-        char *s = va_arg(val, char *) int i;
+        char *s = va_arg(val, char *), int i;
         int j = 0;
 
         if (s == NULL)

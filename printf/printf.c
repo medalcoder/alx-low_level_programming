@@ -9,8 +9,8 @@
 int _printf(const char *format, ...)
 {
 	match m[] = {
-		{"%c", print_char}, {"%s", printf_string}, {"%%", print_37}, {"%d", print_dec}, {"%i", print_int}, {"%r", print_reverse}, {"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned}, {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX}, {"%S", print_EXSTR}, {"%p", print_pointer}
-	}
+		{"%c", print_char}, {"%s", printf_string}, {"%%", print_per}, {"%d", print_dec}, {"%i", print_int}, {"%r", print_reverse}, {"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned}, {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX}, {"%S", print_EXSTR}, {"%p", print_pointer}
+	};
 
 	va_list args;
 	int i = 0, len = 0;
@@ -29,7 +29,7 @@ Here:
 			{
 				len = len + m[k].f(args);
 				i = i + 2;
-				goto Here:
+				goto Here;
 			}
 			k--;
 		}
@@ -37,6 +37,6 @@ Here:
 		i++;
 		len++;
 	}
-	va_end(arg);
+	va_end(args);
 	return (len);
 }
