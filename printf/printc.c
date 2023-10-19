@@ -6,7 +6,7 @@
  * Return: 1
  */
 
-int printf_char(va_list val)
+int print_char(va_list val)
 {
     char str;
 
