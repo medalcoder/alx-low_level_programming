@@ -2,9 +2,9 @@
 
 /**
  * printf_int - prints integer
- * @args: arguments to print 
+ * @args: arguments to print
  * Return: numbers of character printed
-*/
+ */
 
 int print_int(va_list args)
 {
@@ -49,8 +49,8 @@ int print_int(va_list args)
 /**
  * printfdec - print decimals
  * @args: arguments to be printed
- * Return: numbers of character 
-*/
+ * Return: numbers of character
+ */
 
 int print_dec(va_list args)
 {

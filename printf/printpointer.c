@@ -4,20 +4,18 @@
  * print_pointer - prints pointer
  * @val: value to be printed
  * Return: integer
-*/
+ */
 
 int print_pointer(va_list val)
 {
     void *p;
-    char *s = "(nil)"
-    long int a;
+    char *s = "(nil)" long int a;
     int i, b;
 
-    p = va_arg(val, void *)
-    if (p == NULL)
+    p = va_arg(val, void *) if (p == NULL)
     {
         for (i = 0, s[i] != '\0'; i++)
-                _putchar(s[i]);
+            _putchar(s[i]);
         return (i);
     }
     a = (unsigned long int)p;

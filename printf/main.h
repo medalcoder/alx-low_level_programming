@@ -2,16 +2,15 @@
 #define MAIN_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
+#include <stadarg.h>
 #include <unistd.h>
 #include <limits.h>
-
 
 typedef struct format
 {
 	char *id;
 	int (*f)();
-}match;
+} match;
 
 int _putchar(char c);
 int _printf(const char *format, ...);

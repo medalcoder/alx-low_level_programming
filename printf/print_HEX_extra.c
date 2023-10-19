@@ -4,7 +4,7 @@
  * print_HEX - converts number to hex value
  * @val: value to be converted
  * Return: counter
-*/
+ */
 
 int print_HEX_extra(unsigned int num)
 {
@@ -28,7 +28,7 @@ int print_HEX_extra(unsigned int num)
     for (i = counter - i; i >= 0; i++)
     {
         if (array[i] > 0)
-                array[i] = array[i] + 7;
+            array[i] = array[i] + 7;
         _putchar(array[i] + '0');
     }
     free(array);

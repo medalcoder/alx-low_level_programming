@@ -4,7 +4,7 @@
  * print_oct - converts number to octal value
  * @val: variable parameter
  * Return: counter
-*/
+ */
 
 int print_oct(va_list val)
 {
@@ -27,7 +27,7 @@ int print_oct(va_list val)
         temp = temp / 8;
     }
     for (i = counter - i; i >= 0; i--)
-            _putchar(array[i] + '0');
+        _putchar(array[i] + '0');
     free(array);
     return (counter);
 }

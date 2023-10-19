@@ -4,7 +4,7 @@
  * printf_string - print a string
  * @val: argument
  * Return: the length of the string
-*/
+ */
 
 int printf_string(va_list val)
 {
@@ -18,13 +18,14 @@ int printf_string(va_list val)
         str = "(null)";
         length = _strlen(str);
         for (i = 0; i < length; i++)
-                _putchar(str[i]);
-        return(length);
+            _putchar(str[i]);
+        return (length);
     }
-    else{
+    else
+    {
         length = _strlen(str);
         for (i = 0; i < length; i++)
-                _putchar(str[i]);
-        return(length);
+            _putchar(str[i]);
+        return (length);
     }
 }

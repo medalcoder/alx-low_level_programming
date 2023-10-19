@@ -2,9 +2,9 @@
 
 /**
  * printf_int - prints integer
- * @args: arguments to print 
+ * @args: arguments to print
  * Return: numbers of character printed
-*/
+ */
 
 int print_unsigned(va_list args)
 {

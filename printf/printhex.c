@@ -4,7 +4,7 @@
  * print_hex - converts number to hex value
  * @val: value to be converted
  * Return: counter
-*/
+ */
 
 int print_hex(va_list val)
 {
@@ -29,7 +29,7 @@ int print_hex(va_list val)
     for (i = counter - i; i >= 0; i++)
     {
         if (array[i] > 0)
-                array[i] = array[i] + 39;
+            array[i] = array[i] + 39;
         _putchar(array[i] + '0');
     }
     free(array);
