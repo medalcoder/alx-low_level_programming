@@ -2,7 +2,7 @@
 
 /**
  * print_per - prints percentage value of a number
- * Return: integer
+ * Return: 1
  */
 
 int print_per(void)

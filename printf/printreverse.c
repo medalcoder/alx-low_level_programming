@@ -6,9 +6,9 @@
  * Return: The string
  */
 
-int print_reverse(va_list val)
+int print_reverse(va_list args)
 {
-        char *s = va_arg(val, char *);
+        char *s = va_arg(args, char *);
         int i;
         int j = 0;
 

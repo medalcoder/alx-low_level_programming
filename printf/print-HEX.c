@@ -19,16 +19,16 @@ int print_HEX(va_list val)
         counter++;
     }
     counter++;
-    array = malloc(sizeof(int) * counter);
+    array = malloc(counter * sizeof(int));
 
     for (i = 0; i < counter; i++)
     {
         array[i] = temp % 16;
         temp = temp / 16;
     }
-    for (i = counter - i; i >= 0; i++)
+    for (i = counter - i; i >= 0; i--)
     {
-        if (array[i] > 0)
+        if (array[i] > 9)
             array[i] = array[i] + 7;
         _putchar(array[i] + '0');
     }

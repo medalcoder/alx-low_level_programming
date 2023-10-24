@@ -12,23 +12,27 @@ int print_rot13(va_list val)
     int k = 0;
     char *s = va_arg(val, char *);
     char a[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-    char b[] = {"nopqrstuvwzyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
+    char b[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
     if (s == NULL)
         s = "(null)";
-    for (i = 0; a[j] && !k; j++)
+    for (i = 0; s[i]; i++)
     {
-        if (s[i] == a[j])
-        {
-            _putchar(b[j]);
-            counter++;
-            k = 1;
-        }
-        if (!k)
-        {
-            _putchar(s[i]);
-            counter++;
-        }
+	    k = 0;
+	    for (j = 0; al[j] && !k; j++)
+	    {
+		    if (s[i] == a[j])
+		    {
+			    _putchar(b[j]);
+			    counter++;
+			    k = 1;
+		    }
+	    }
+	    if (!k)
+	    {
+		    _putchar(s[i]);
+		    counter++;
+	    }
     }
     return (counter);
 }

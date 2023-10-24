@@ -6,16 +6,23 @@
 #include <unistd.h>
 #include <limits.h>
 
+/**
+ * struct format - converter for printf function
+ * @ph: type of char pointer of the specifier
+ * @function: function for the conversion specifier
+ */
+
 typedef struct format
 {
-	char *id;
-	int (*f)();
-} match;
+	char *ph;
+	int (*function)();
+} convert;
 
+int *_strcpy(char *dest, char *src);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list val);
-int printf_string(va_list val);
+int print_string(va_list val);
 int _strlen(char *str);
 int _strlenc(const char *str);
 int print_per(void);
