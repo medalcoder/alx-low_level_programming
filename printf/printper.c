@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
- * print_per - prints percentage value of a number
- * Return: 1
+ * print_per - prints the char %.
+ * Return: 1.
  */
-
 int print_per(void)
 {
-    _putchar(37);
-    return (1);
+	_putchar(37);
+	return (1);
 }

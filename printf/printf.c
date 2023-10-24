@@ -1,41 +1,46 @@
 #include "main.h"
-
 /**
- * _printf - mirrors printf
- * @format: identifier look for
- * Return: integer
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
  */
-
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-	match m[] = {
-		{"%c", print_char}, {"%s", print_string}, {"%%", print_per}, {"%i", print_int}, {"%d", print_dec}, {"%b", print_bin}, {"%u", print_unsigned}, {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX}, {"%S", printEXSTR}, {"%p", print_pointer}, {"%r", print_reverse}, {"%R", print_rot13}};
+	convert p[] = {
+		{"%s", print_s}, {"%c", print_c},
+		{"%%", print_37},
+		{"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
+		{"%R", print_rot13}, {"%b", print_bin},
+		{"%u", print_unsigned},
+		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
+		{"%S", print_exc_string}, {"%p", print_pointer}
+	};
 
 	va_list args;
-	int i = 0, len = 0;
-	int k;
+	int i = 0, j, length = 0;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
+
 Here:
 	while (format[i] != '\0')
 	{
-		k = 13;
-		while (k >= 0)
+		j = 13;
+		while (j >= 0)
 		{
-			if (p[k].ph[0] == format[i] && p[k].ph[1] == format[i + 1])
+			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
 			{
-				len += p[k].function(args);
+				length += p[j].function(args);
 				i = i + 2;
 				goto Here;
 			}
-			k--;
+			j--;
 		}
 		_putchar(format[i]);
-		len++;
+		length++;
 		i++;
 	}
 	va_end(args);
-	return (len);
+	return (length);
 }
